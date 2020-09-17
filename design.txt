@@ -1,0 +1,23 @@
+Main:
+    Header:
+        Navigation:
+            Home:
+                routes back to main page
+            Categories-Link:
+                Food For Thought
+                Math For Thought
+                Algorithms For Thought
+                Application Design For Thought
+                Datastructures For Thought
+                Misc For Thought
+            Contact:
+                Details to contact me
+    Main-Body:
+        Blog Posts:
+            maybe add in discussions -- not sure yet
+
+Behind the scenes:
+    JWT Authentication Login (Admin only):
+        Ability to add blog Posts
+        Ability to delete blog Posts
+

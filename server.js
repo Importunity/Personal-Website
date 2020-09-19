@@ -1,0 +1,28 @@
+const morgan = require("morgan");
+const express = require("express");
+const path = require("path");
+require("./config/config");
+
+const app = express();
+
+// cors
+//app.use(cors);
+// bodyparser -- no need for it anymore as express has a built in body parser
+app.use(express.json());
+//logger
+app.use(morgan("dev"));
+
+// create build folder if in production i.e npm run build
+if (process.env.NODE_ENV === "production") {
+  // loads the build folder
+  app.use(express.static("client/build"));
+  app.get("*", (request, response) => {
+    // directing to index.html
+    response.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
+
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
+});

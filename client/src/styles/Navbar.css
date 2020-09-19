@@ -1,0 +1,18 @@
+#logo {
+  text-decoration: none;
+  color: blue;
+}
+
+#logo:hover {
+  color: blue;
+}
+
+.nav-link{
+  text-decoration: none;
+}
+
+.navbar-container{
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}

@@ -1,5 +1,6 @@
-.app {
-  height: 100vh;
+
+.app{
+ background-color: black;
   width: 100vw;
-  background-color: #010c10;
+  height: 100vh;
 }

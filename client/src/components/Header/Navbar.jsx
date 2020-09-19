@@ -7,45 +7,31 @@ import Contact from "./Contact";
 import Home from "./Home";
 import Login from "./Login";
 
+// backgrounds
+import HomeBG from '../../assets/images/Better-Tomorrow.jpg';
+import AboutBG from '../../assets/images/Hong-Kong.jpg';
+import ContactBG from '../../assets/images/revive.jpg';
+
 function Navbar() {
-  const [backgroundImages, setBackgroundImage] = useState("background-image: url('../assets/images/Better-Tomorrow.jpg')");
+  const[backgroundImage, setBackgroundImage] = useState(HomeBG);
+
   return (
-    <div className="navbar-container" style={{backgroundImage: '../assets/images/Better-Tomorrow.jpg' }} >
+    <div className="navbar-container" style={{backgroundImage: `url(${backgroundImage})` }} >
       <Router>
         <div>
           <nav className="navbar navbar-expand-lg">
-            <a className="navbar-brand">
-              <Link to={"/"} className="nav-link">
+              <Link to={"/"} className="nav-link navbar-brand" onClick={() => setBackgroundImage(HomeBG)}>
                 Navbar
               </Link>
-            </a>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav ml-auto ">
                 <li className="nav-item active">
-                  <a className="nav-link" href="/#" onClick={() => "background-image: url('../assets/images/Better-Tomorrow.jpg')"}>
-                    <Link to={'/about'} className="nav-link" >About <span className="sr-only">(current)</span></Link> 
-                  </a>
+                    <Link to={'/about'} className="nav-link" onClick={() => setBackgroundImage(AboutBG)}>About <span className="sr-only">(current)</span></Link> 
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/#">
-                    <Link to={'/contact'} className="nav-link" onClick={() => "background-image: url('../assets/images/Hong-Kong.jpg')"}>Contact</Link>
-                  </a>
+                    <Link to={'/contact'} className="nav-link" onClick={() => setBackgroundImage(ContactBG)}>Contact</Link>
                 </li>
               </ul>
-              {/*<form className="form-inline my-2 my-lg-0">
-                <input
-                  className="form-control mr-sm-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                ></input>
-                <button
-                  className="btn btn-outline-success my-2 my-sm-0"
-                  type="submit"
-                >
-                  Search
-                </button>
-  </form>*/}
             </div>
           </nav>
           <Switch>

@@ -7,29 +7,32 @@ import Contact from "./Contact";
 import Home from "./Home";
 import Login from "./Login";
 
-// backgrounds
-import HomeBG from '../../assets/images/Better-Tomorrow.jpg';
+// images
 import AboutBG from '../../assets/images/Hong-Kong.jpg';
 import ContactBG from '../../assets/images/revive.jpg';
 
+import Umbrella from '../../assets/images/Umbrella.png';
+
 function Navbar() {
-  const[backgroundImage, setBackgroundImage] = useState(HomeBG);
+  const[backgroundImage, setBackgroundImage] = useState("black");
+
+  const[showMainText, setMainText] = useState(true);
 
   return (
-    <div className="navbar-container" style={{backgroundImage: `url(${backgroundImage})` }} >
+    <div className="home-container" style={{backgroundColor: "black" }} >
       <Router>
         <div>
           <nav className="navbar navbar-expand-lg">
-              <Link to={"/"} className="nav-link navbar-brand" onClick={() => setBackgroundImage(HomeBG)}>
-                Navbar
+              <Link to={"/"} className="nav-link navbar-brand nav-text" onClick={() => {setMainText(true);}} >
+                U M B R E L L A
               </Link>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav ml-auto ">
                 <li className="nav-item active">
-                    <Link to={'/about'} className="nav-link" onClick={() => setBackgroundImage(AboutBG)}>About <span className="sr-only">(current)</span></Link> 
+                    <Link to={'/about'} className="nav-link nav-text" onClick={() => {setBackgroundImage(AboutBG); setMainText(false)}}>About <span className="sr-only">(current)</span></Link> 
                 </li>
                 <li className="nav-item">
-                    <Link to={'/contact'} className="nav-link" onClick={() => setBackgroundImage(ContactBG)}>Contact</Link>
+                    <Link to={'/contact'} className="nav-link nav-text" onClick={() => {setBackgroundImage(ContactBG); setMainText(false)}}>Contact</Link>
                 </li>
               </ul>
             </div>
@@ -42,6 +45,9 @@ function Navbar() {
           </Switch>
         </div>
       </Router>
+      {showMainText? (
+        <img src={Umbrella} id="main-text"/> 
+      ): null }
     </div>
   );
 }

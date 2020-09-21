@@ -8,8 +8,8 @@ import Home from "./Home";
 import Login from "./Login";
 
 // images
-import AboutBG from '../../assets/images/Hong-Kong.jpg';
-import ContactBG from '../../assets/images/revive.jpg';
+//import AboutBG from '../../assets/images/Hong-Kong.jpg';
+//import ContactBG from '../../assets/images/revive.jpg';
 
 import Umbrella from '../../assets/images/Umbrella.png';
 
@@ -20,23 +20,25 @@ function Navbar() {
 
   return (
     <div className="home-container" style={{backgroundColor: "black" }} >
+            {showMainText? (
+        <img src={Umbrella} id="main-text"/> 
+      ): null }
       <Router>
         <div>
-          <nav className="navbar navbar-expand-lg">
-              <Link to={"/"} className="nav-link navbar-brand nav-text" onClick={() => {setMainText(true);}} >
-                U M B R E L L A
-              </Link>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav ml-auto ">
-                <li className="nav-item active">
-                    <Link to={'/about'} className="nav-link nav-text" onClick={() => {setBackgroundImage(AboutBG); setMainText(false)}}>About <span className="sr-only">(current)</span></Link> 
-                </li>
-                <li className="nav-item">
-                    <Link to={'/contact'} className="nav-link nav-text" onClick={() => {setBackgroundImage(ContactBG); setMainText(false)}}>Contact</Link>
-                </li>
+              <ul className="nav flex-column">
+                  <li className="nav-item active">
+                    <Link to={"/"} className="nav-link nav-text" onClick={() => {setMainText(true);}} >U M B R E L L A</Link>
+                  </li>
+                  <li className="nav-item active">
+                    <Link to={'/blog'} className="nav-link nav-text" onClick={() => {{/*setBackgroundImage(Blog);*/} setMainText(false)}}>Blog</Link> 
+                  </li>
+                  <li className="nav-item active">
+                    <Link to={'/about'} className="nav-link nav-text" onClick={() => {{/*setBackgroundImage(AboutBG);*/} setMainText(false)}}>About</Link> 
+                  </li>
+                  <li className="nav-item active">
+                    <Link to={'/contact'} className="nav-link nav-text" onClick={() => {{/*setBackgroundImage(ContactBG);*/} setMainText(false)}}>Contact</Link>
+                  </li>
               </ul>
-            </div>
-          </nav>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/contact" component={Contact} />
@@ -45,9 +47,6 @@ function Navbar() {
           </Switch>
         </div>
       </Router>
-      {showMainText? (
-        <img src={Umbrella} id="main-text"/> 
-      ): null }
     </div>
   );
 }

@@ -1,10 +1,5 @@
-/*.about-container {
-  background-image: url("../assets/images/Better-Tomorrow.jpg");
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
+.about-container {
   position: absolute;
-  bottom: 0;
-  opacity: 0.5;
-}*/
+  top: 0;
+  left: 0;
+}

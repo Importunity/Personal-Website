@@ -1,0 +1,17 @@
+.login-container{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.inner-container{
+    position: static;
+    width: 95vw;
+    height: 100vh;
+}
+
+
+.login{
+    margin-top: 30vh;
+}
+

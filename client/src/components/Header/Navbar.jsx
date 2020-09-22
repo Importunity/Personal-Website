@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import About from "./About";
 import Contact from "./Contact";
 import Home from "./Home";
-import Login from "./Login";
+import Login from "../Login/Login";
+import Blog from './Blog';
 
 // images
 //import AboutBG from '../../assets/images/Hong-Kong.jpg';
@@ -25,10 +26,14 @@ function Navbar() {
       ): null }
       <Router>
         <div>
-              <ul className="nav flex-column">
-                  <li className="nav-item active">
-                    <Link to={"/"} className="nav-link nav-text" onClick={() => {setMainText(true);}} >U M B R E L L A</Link>
-                  </li>
+          {showMainText? (
+          <img src={Umbrella} id="main-text"/> 
+        ): null }
+            <ul className="nav flex-column">
+                <li className="nav-item active">
+                  <Link to={"/"} className="nav-link nav-text" onClick={() => {setMainText(true);}} >U M B R E L L A</Link>
+                </li>
+                <div className="link-container">
                   <li className="nav-item active">
                     <Link to={'/blog'} className="nav-link nav-text" onClick={() => {{/*setBackgroundImage(Blog);*/} setMainText(false)}}>Blog</Link> 
                   </li>
@@ -38,11 +43,13 @@ function Navbar() {
                   <li className="nav-item active">
                     <Link to={'/contact'} className="nav-link nav-text" onClick={() => {{/*setBackgroundImage(ContactBG);*/} setMainText(false)}}>Contact</Link>
                   </li>
-              </ul>
+                </div>
+            </ul>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/contact" component={Contact} />
             <Route path="/about" component={About} />
+            <Route path="/blog" component={Blog} />
             <Route path="/amadeus/blog/login" component={Login} />
           </Switch>
         </div>

@@ -12,6 +12,10 @@ app.use(express.json());
 //logger
 app.use(morgan("dev"));
 
+// routes
+app.use('api/users', users);
+app.use('/api/auth', authentication);
+
 // create build folder if in production i.e npm run build
 if (process.env.NODE_ENV === "production") {
   // loads the build folder

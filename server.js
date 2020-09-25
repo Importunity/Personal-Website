@@ -5,15 +5,17 @@ require("./config/config");
 
 const app = express();
 
-// cors
-//app.use(cors);
-// bodyparser -- no need for it anymore as express has a built in body parser
+// routes 
+const users = require('./routes/api/users.js');
+const authentication = require('./routes/api/auth.js');
+
+
 app.use(express.json());
 //logger
 app.use(morgan("dev"));
 
 // routes
-app.use('api/users', users);
+app.use('/api/users', users);
 app.use('/api/auth', authentication);
 
 // create build folder if in production i.e npm run build

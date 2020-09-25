@@ -8,22 +8,26 @@ import Home from "./Home";
 import Login from "../Login/Login";
 import Blog from './Blog';
 
+// logout portion
+import Logout from '../Login/Logout';
+import PropTypes from 'prop-types';
+
 // images
 //import AboutBG from '../../assets/images/Hong-Kong.jpg';
 //import ContactBG from '../../assets/images/revive.jpg';
 
 import Umbrella from '../../assets/images/Umbrella.png';
+import { connect } from "react-redux";
 
-function Navbar() {
+function Navbar(props) {
   const[backgroundImage, setBackgroundImage] = useState("black");
 
   const[showMainText, setMainText] = useState(true);
 
+  const {isAuthenticated} = props;
+
   return (
     <div className="home-container" style={{backgroundColor: "black" }} >
-            {showMainText? (
-        <img src={Umbrella} id="main-text"/> 
-      ): null }
       <Router>
         <div>
           {showMainText? (
@@ -43,6 +47,11 @@ function Navbar() {
                   <li className="nav-item active">
                     <Link to={'/contact'} className="nav-link nav-text" onClick={() => {{/*setBackgroundImage(ContactBG);*/} setMainText(false)}}>Contact</Link>
                   </li>
+                  {isAuthenticated? (
+                    <li className="nav-item active">
+                      <Logout />
+                    </li>
+                  ): null}
                 </div>
             </ul>
           <Switch>
@@ -58,4 +67,12 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+Navbar.propTypes = {
+  isAuthenticated: PropTypes.bool
+};
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps)(Navbar);

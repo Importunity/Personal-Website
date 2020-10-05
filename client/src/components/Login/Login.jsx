@@ -15,7 +15,7 @@ import Logout from './Logout';
 
 function Login(props){
     // user information
-   const [info, setInfo] = useState({name: "", email: "", password: "", msg: null});
+   const [info, setInfo] = useState({name: "", email: "", password: "", message: null});
    // retrieve the error responses
    const {error, isAuthenticated} = props;
    // use reference to contain the previous error

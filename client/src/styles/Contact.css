@@ -2,5 +2,121 @@
     position: absolute;
     top: 0;
     left: 0;
+    background-color: #dde1ea;
+    background-size: cover;
+}
+
+.center-contact-container{
+    background-color: #25313f;
+    height: 90vh;
+    width: auto;
+}
+
+.contact-form-container{
+    margin-top: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contact-card{
+    position: relative;
+    bottom: 20vh;
+    left: 20vw;
+    width: 55vw;
+    font-family: 'Bebas Neue', cursive;
+    color: #7c8283;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5) !important;
+
+}
+
+#contact-me{
+    margin-left: 5%;
+    margin-top: 2%;
+    word-spacing: 20px;
+}
+
+.message{
+    width: 80% !important;
+}
+
+.contact-item{
+    margin-top: 3vh !important;
+    width: 40%;
+    margin-left: 5% !important;
+}
+
+#characters{
+    font-family:'Roboto', Courier, monospace;
+    float: right;
+    margin-right: 10%;
+    padding-bottom: 10%;
+    margin-top: 1%;
+}
+
+
+.send-email{
+    position: absolute;
+    left: 60vw;
+    right: 20vw;
+    bottom: 5vh;
+}
+
+.email-btn {
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none !important;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #222;
+    padding: 20px 100px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
 }
   
+.email-btn span {
+    position: relative; 
+    z-index: 1;
+}
+
+.email-btn:hover{
+    color: black;
+}
+  
+.email-btn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: #78c7d2;
+    transition: all .5s ease-in-out;
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+  
+.email-btn:hover:after {
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    background-color: yellow;
+}
+
+
+.invalid-inputs{
+    color: red;
+    font-weight: bold;
+}
+
+.contact-image{
+    position: absolute;
+    left: 50vw;
+    top: 25vh;
+    height: 30vh;
+    width: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

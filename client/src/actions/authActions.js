@@ -83,22 +83,17 @@ export const logout = () => {
 
 // setup config/headers and token
 export const tokenConfig = getState => {
-        // this will go into the authReducer and retrieve the token from the initial state localstorage
-        // the "auth" can be found at combinereducers
-        const token = getState().auth.token;
-        //console.log(`state token: ${token}`);
-        //console.log(`token is: ${getState().auth.token}`);
+    const token = getState().auth.token;
+    // headers
+    const config = {
+        headers:{
+            "Content-Type": "application/json"
+        }
+    }
 
-        // headers
-        const config = {
-            headers:{
-                "Content-Type": "application/json"
-            }
-        }
-    
-        // add the token
-        if(token){
-            config.headers['x-auth-token'] = token;
-        }
+    // add the token
+    if(token){
+        config.headers['x-auth-token'] = token;
+    }
     return config;
 }

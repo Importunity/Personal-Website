@@ -1,3 +1,8 @@
+// NOTES types
+export const GET_NOTES = 'GET_NOTES';
+export const ADD_NOTE = 'ADD_NOTE';
+export const DELETE_NOTE = 'DELETE_NOTE';
+export const NOTES_LOADING = 'NOTES_LOADING';
 // User types, for authentication 
 export const USER_LOADING = 'USER_LOADING';
 export const USER_LOADED = 'USER_LOADED';

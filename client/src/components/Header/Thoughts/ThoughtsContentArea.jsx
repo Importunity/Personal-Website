@@ -38,16 +38,18 @@ function ThoughtsContentArea(props){
     const notes = props.note.notes;
     const {isAuthenticated} = props.auth;
 
-    const filteredNotes = notes;
-
-
+    const[search, setSearch] = useState("");
+    const updateSearch = event => {
+        setSearch(event.target.value.substr(0,20));
+    }
+    const filteredNotes = notes.filter((note) => note.title.toLowerCase().indexOf(search.toLowerCase()) !== -1);
     return (
         <div className="">
             <div className="row">
                 <div className="col-md-3">
                     <div className="search-container">
                         <form className="search-form">
-                            <input className="form-control search-form-control" type="search" placeholder="Search Thoughts"  />
+                            <input className="form-control search-form-control" value={search} onChange={updateSearch} type="search" placeholder="Search Thoughts"  />
                         </form>
                     </div>
                     {isAuthenticated? (

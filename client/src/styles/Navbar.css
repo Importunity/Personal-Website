@@ -4,6 +4,7 @@
   font-size: 1vw;
   margin-bottom: 50px;
   user-select: none;
+  outline: none;
 }
 
 .nav-text:hover {

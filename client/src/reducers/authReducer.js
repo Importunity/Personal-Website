@@ -19,6 +19,7 @@ export default function(state = initialState, action){
                 isLoading: true
             };
         case USER_LOADED:
+            
             return{
                 // when the user has been loaded sets it to false and successful authentication
                 ...state,
@@ -28,8 +29,9 @@ export default function(state = initialState, action){
                 user: action.payload
             };
         case LOGIN_SUCCESS: case REGISTER_SUCCESS:
-            //console.log(action.payload.user.token);
-            localStorage.setItem('token', action.payload.user.token);
+            //console.log(action);
+            localStorage.setItem('token', action.payload.token);
+
             return{
                 // when user has been loaded or register is success, then sets loading to false and authentication to true
                 ...state,

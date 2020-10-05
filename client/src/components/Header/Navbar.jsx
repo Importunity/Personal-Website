@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import Home from "./Home";
 import Login from "../Login/Login";
 import Blog from './Blog';
+import Thoughts from './Thoughts/Thoughts';
 
 // logout portion
 import Logout from '../Login/Logout';
@@ -15,6 +16,7 @@ import PropTypes from 'prop-types';
 // images
 //import AboutBG from '../../assets/images/Hong-Kong.jpg';
 //import ContactBG from '../../assets/images/revive.jpg';
+import img1 from '../../assets/images/img1.jpeg';
 
 import Umbrella from '../../assets/images/Umbrella.png';
 import { connect } from "react-redux";
@@ -42,6 +44,9 @@ function Navbar(props) {
                     <Link to={'/blog'} className="nav-link nav-text" onClick={() => {{/*setBackgroundImage(Blog);*/} setMainText(false)}}>Blog</Link> 
                   </li>
                   <li className="nav-item active">
+                    <Link to={'/thoughts'} className="nav-link nav-text" onClick={() => {{/*setBackgroundImage(img1);*/} setMainText(false)}}>Thoughts</Link> 
+                  </li>
+                  <li className="nav-item active">
                     <Link to={'/about'} className="nav-link nav-text" onClick={() => {{/*setBackgroundImage(AboutBG);*/} setMainText(false)}}>About</Link> 
                   </li>
                   <li className="nav-item active">
@@ -59,6 +64,7 @@ function Navbar(props) {
             <Route path="/contact" component={Contact} />
             <Route path="/about" component={About} />
             <Route path="/blog" component={Blog} />
+            <Route path="/thoughts" component={Thoughts} />
             <Route path="/amadeus/blog/login" component={Login} />
           </Switch>
         </div>

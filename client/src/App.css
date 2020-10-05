@@ -4,3 +4,9 @@
   width: 100vw;
   height: 100vh;
 }
+
+.inner-container{
+  position: static;
+  width: 95vw;
+  height: 100vh;
+}

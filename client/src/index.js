@@ -8,11 +8,15 @@ import 'bootstrap/dist/js/bootstrap.js';
 import 'popper.js';
 import 'jquery/dist/jquery';
 
-ReactDOM.render(
+/*ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById("root")
+);*/
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

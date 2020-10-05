@@ -7,7 +7,6 @@ const jwt = require('jsonwebtoken');
 function auth(request, response, next){
     // header of the token
     const token = request.header('x-auth-token');
-    //console.log(`token is: ${token}`);
     // check for token
     if(!token){
         // 401 is used for unauthorized 

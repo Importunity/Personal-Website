@@ -45,9 +45,10 @@ router.post('/', (request, response) => {
                                 throw err;
                             }
                             response.json({
+                                token, 
                                 user: {
                                     // sends a response with token and user
-                                    token, 
+
                                     id: user.id,
                                     name: user.name, 
                                     email: user.email

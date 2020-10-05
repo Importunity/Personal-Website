@@ -8,6 +8,7 @@ const app = express();
 // routes 
 const users = require('./routes/api/users.js');
 const authentication = require('./routes/api/auth.js');
+const notes = require('./routes/api/notes');
 
 
 app.use(express.json());
@@ -17,6 +18,7 @@ app.use(morgan("dev"));
 // routes
 app.use('/api/users', users);
 app.use('/api/auth', authentication);
+app.use('/api/notes', notes);
 
 // create build folder if in production i.e npm run build
 if (process.env.NODE_ENV === "production") {

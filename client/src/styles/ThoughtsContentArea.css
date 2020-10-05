@@ -1,0 +1,19 @@
+.pagination{
+    position: absolute;
+    top: 94vh;
+    left: 14.3vw;
+    border: none !important;
+}
+
+.search-form-control{
+    height: 50px !important;
+    border: none !important;
+    margin-left: 2%;
+    box-shadow: none !important;
+    padding-bottom: 0 !important;
+}
+
+.search-container{
+    background-color: white;
+    margin-right: -0.5vw;
+}

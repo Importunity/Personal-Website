@@ -1,0 +1,17 @@
+.create-note-container{
+    margin-top: 25%;
+}
+
+.take-a-note{
+    width: 100%;
+}
+
+.note-text{
+    background-color: white;
+}
+
+.create-input{
+    width: 100%;
+    border: none;
+    resize: none;
+}

@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Cronos Pro Bold';
+    src: url('../assets/fonts/Cronos-Pro-Bold-Caption_12429.woff');
+}
+
+
+.note-header{
+    background-color: inherit !important;
+    border-bottom: none !important;
+    font-family: 'Cronos Pro Bold';
+    font-weight: bold;
+    user-select: none;
+}
+
+.note-card{
+    margin-right: -1vw;
+}

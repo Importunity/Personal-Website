@@ -1,0 +1,16 @@
+
+
+.thoughts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f6f8fb;
+    overflow-x: hidden;
+}
+
+.main-content{
+    background-color:#b4bbcb;
+    height: 100vh;
+}
+
+  

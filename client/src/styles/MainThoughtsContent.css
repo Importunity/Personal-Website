@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Cronos Pro Bold';
+    src: url('../assets/fonts/Cronos-Pro-Bold-Caption_12429.woff');
+}
+
+@font-face {
+    font-family: 'Cronos Pro Regular';
+    src: url('../assets/fonts/Cronos-Pro_12459.woff');
+}
+
+.main-thoughts-container{
+    position: static;
+    margin-left: -2%;
+    height: 100vh;
+    width: auto;
+    user-select: none;
+    font-family: 'Cronos Pro Regular';
+    background-color: #f6f8fb;
+}
+
+.image-thoughts{
+    position: absolute;
+    width: 50vw;
+    left: 10vw;
+    right: 10vw;
+    top: 5vh;
+    height: 50%;
+    user-select: none;
+}
+
+.thoughts-title{
+    font-family: 'Cronos Pro Bold';
+}
+
+.thoughts-body-container{
+    position: relative;
+    top: 50vh;
+    width: 80%;
+    height: 50vh;
+    background-color: #e6e9ee !important;
+}
+
+.thoughts-title, .thoughts-body{
+    margin-left: 5%;
+    padding-top: 5%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    margin-right: 5%;
+}

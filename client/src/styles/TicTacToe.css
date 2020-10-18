@@ -1,0 +1,52 @@
+.ttt-container {
+    position: absolute;
+    font: 14px "Century Gothic", Futura, sans-serif;
+    background-color: black;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    color: white;
+}
+  
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+
+.square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: #ddd;
+}
+
+.game-board{
+    position: relative;
+    left: 40vw;
+    top: 40vh;
+}
+
+.game-info{
+    position: static;
+    margin-top: 5vh;
+}
+

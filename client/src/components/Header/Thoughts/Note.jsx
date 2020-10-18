@@ -1,21 +1,29 @@
-import { Divider } from '@material-ui/core';
-import React, { useState } from 'react';
+import React from 'react';
 import '../../../styles/Note.css';
 
 function Note(props){
-    const[clicked, setClicked] = useState(false);
+    const content = props.content.substring(0, 150)
+    function handleDelete() {
+        //console.log(`deleted id: ${props.id}`);
+        props.onDelete(props.id);
+    }
     return (
-        <div className="">
-            <div className="card note-card" onClick={() => setClicked(true)}>
-                <div className="card-header note-header">
-                    <h1>{props.title}</h1>
-                </div>
-                <div className="card-body">
-                    <p>{props.content}</p>
-                </div>
+        <div className="card note-card">
+            <div className="card-body note-header">
+                <h1>{props.title}</h1>
             </div>
+            <div className="card-body">
+                <p>{content}</p>
+            </div>
+            {props.isAuthenticated? (
+            <div className="card-footer">
+                <i className="fas fa-trash-alt" onClick={handleDelete}></i>
+            </div>
+            ): null }
         </div>
     );
 }
+
+
 
 export default Note;

@@ -8,25 +8,33 @@ import Home from "./Home";
 import Login from "../Login/Login";
 import Blog from './Blog';
 import Thoughts from './Thoughts/Thoughts';
+import TicTacToe from '../Projects/Simple Games/Tic-Tac-Toe/Game';
+import Stock from '../Projects/Stock Market/Stock';
 
 // logout portion
 import Logout from '../Login/Logout';
 import PropTypes from 'prop-types';
 
-// images
-//import AboutBG from '../../assets/images/Hong-Kong.jpg';
-//import ContactBG from '../../assets/images/revive.jpg';
-import img1 from '../../assets/images/img1.jpeg';
 
 import Umbrella from '../../assets/images/Umbrella.png';
 import { connect } from "react-redux";
+import { Menu, MenuItem } from "@material-ui/core";
 
 function Navbar(props) {
-  const[backgroundImage, setBackgroundImage] = useState("black");
-
   const[showMainText, setMainText] = useState(true);
 
   const {isAuthenticated} = props;
+
+  // for projects anchor
+  const [projectsAnchor, setProjectsAnchor] = useState(null);
+
+  const handleClick = (event) => {
+    setProjectsAnchor(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setProjectsAnchor(null);
+  };
 
   return (
     <div className="home-container" style={{backgroundColor: "black" }} >
@@ -35,17 +43,28 @@ function Navbar(props) {
           {showMainText? (
           <img src={Umbrella} id="main-text"/> 
         ): null }
-            <ul className="nav flex-column">
+            <ul className="nav flex-column" >
                 <li className="nav-item active">
                   <Link to={"/"} className="nav-link nav-text" onClick={() => {setMainText(true);}} >U M B R E L L A</Link>
                 </li>
                 <div className="link-container">
-                  <li className="nav-item active">
-                    <Link to={'/blog'} className="nav-link nav-text" onClick={() => {{/*setBackgroundImage(Blog);*/} setMainText(false)}}>Blog</Link> 
-                  </li>
+                  {/*<li className="nav-item active">
+                    <Link to={'/blog'} className="nav-link nav-text" onClick={() => {{ setMainText(false)}}>Blog</Link> 
+                  </li>*/}
                   <li className="nav-item active">
                     <Link to={'/thoughts'} className="nav-link nav-text" onClick={() => {{/*setBackgroundImage(img1);*/} setMainText(false)}}>Thoughts</Link> 
                   </li>
+                  <li className="nav-item active" onClick={handleClick}>
+                    <Link to={'#'} className="nav-text nav-link">Projects</Link>
+                  </li>
+                  <Menu className=" active projects-menu" projectsAnchor={projectsAnchor} keepMounted open={Boolean(projectsAnchor)} onClose={handleClose} >
+                    <MenuItem onClick={handleClose}>
+                      <Link to={'/tic-tac-toe'} className="nav-link nav-text menu-item" onClick={() => {setMainText(false)}}>Tic Tac Toe</Link>
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <Link to={'/stock'} className="nav-link nav-text menu-item" onClick={() => {setMainText(false)}}>Stocks</Link>
+                    </MenuItem>
+                  </Menu>
                   <li className="nav-item active">
                     <Link to={'/about'} className="nav-link nav-text" onClick={() => {{/*setBackgroundImage(AboutBG);*/} setMainText(false)}}>About</Link> 
                   </li>
@@ -63,8 +82,10 @@ function Navbar(props) {
             <Route exact path="/" component={Home} />
             <Route path="/contact" component={Contact} />
             <Route path="/about" component={About} />
-            <Route path="/blog" component={Blog} />
+            {/*<Route path="/blog" component={Blog} />*/}
+            <Route path="/stock" component={Stock} />
             <Route path="/thoughts" component={Thoughts} />
+            <Route path="/tic-tac-toe" component={TicTacToe} />
             <Route path="/amadeus/blog/login" component={Login} />
           </Switch>
         </div>

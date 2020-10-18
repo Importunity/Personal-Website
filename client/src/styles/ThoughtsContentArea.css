@@ -3,6 +3,7 @@
     top: 94vh;
     left: 14.3vw;
     border: none !important;
+    overflow-x: hidden !important;
 }
 
 .search-form-control{
@@ -16,4 +17,9 @@
 .search-container{
     background-color: white;
     margin-right: -0.5vw;
+}
+
+.empty-content{
+    text-align: center;
+    margin-top: 50vh;
 }

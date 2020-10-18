@@ -5,8 +5,6 @@
 
 
 .note-header{
-    background-color: inherit !important;
-    border-bottom: none !important;
     font-family: 'Cronos Pro Bold';
     font-weight: bold;
     user-select: none;
@@ -14,4 +12,11 @@
 
 .note-card{
     margin-right: -1vw;
+    border-radius: 0 !important;
+    transition: background-color 1s ease-out;
+
+}
+
+.note-card:hover{
+    background-color:lightgray !important;
 }

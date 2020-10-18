@@ -38,6 +38,23 @@
   right: 0;
 }
 
+.menu-item{
+  color: black;
+}
+
+.menu-item:hover{
+  color: black;
+}
+
+.projects-menu{
+  margin-left: 85vw;
+  margin-top: 10vh;
+}
+
+.menu-item{
+  margin-bottom: 0;
+}
+
 
 
 

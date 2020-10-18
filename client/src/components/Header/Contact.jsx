@@ -1,5 +1,5 @@
 import { Card, CardContent, Snackbar, TextField } from "@material-ui/core";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import '../../styles/Contact.css';
 import { Alert, AlertTitle } from '@material-ui/lab';
 import validator from 'validator';

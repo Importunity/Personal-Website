@@ -7,10 +7,9 @@ import PropTypes from 'prop-types';
 // the provider helps us share states throughout the components
 import { connect } from 'react-redux';
 import '../../styles/Login.css';
-import { Button, TextField } from '@material-ui/core';
-import { Route, useHistory } from 'react-router';
-import Navbar from '../Header/Navbar';
-import Logout from './Logout';
+import { TextField } from '@material-ui/core';
+import {useHistory } from 'react-router';
+
 
 
 function Login(props){
@@ -84,12 +83,8 @@ function Login(props){
                         <div className="card login-card" >
                             <div className="card-body">
                                 <form id="login-form" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                                    <div className="login-input">
-                                        <TextField required className="login-input" name="email" id="email" label="Email" fullWidth onChange={handleChange}/>
-                                    </div>
-                                    <div className="login-input">
-                                        <TextField id="password" className="login-input" name="password" label="Password" type="password" autoComplete="current-password"  fullWidth onChange={handleChange}/>
-                                    </div>
+                                    <TextField required className="login-input" name="email" id="email" label="Email" fullWidth onChange={handleChange}/>
+                                    <TextField id="password" className="login-input" name="password" label="Password" type="password" autoComplete="current-password"  fullWidth onChange={handleChange}/>
                                 </form>
                             </div>
                             <div className="card-footer">

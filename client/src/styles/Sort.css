@@ -1,0 +1,11 @@
+.sort-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #7596a1;
+}
+
+.sort-item{
+    text-decoration: none !important;
+    color: white !important; 
+}

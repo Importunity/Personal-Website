@@ -19,6 +19,8 @@ import PropTypes from 'prop-types';
 import Umbrella from '../../assets/images/Umbrella.png';
 import { connect } from "react-redux";
 import { Menu, MenuItem } from "@material-ui/core";
+import SortingNav from "../Projects/Algorithms/Sorting/SortingNav";
+import cloud4 from '../../assets/images/cloud4.png';
 
 function Navbar(props) {
   const[showMainText, setMainText] = useState(true);
@@ -41,8 +43,11 @@ function Navbar(props) {
       <Router>
         <div>
           {showMainText? (
-          <img src={Umbrella} id="main-text"/> 
-        ): null }
+            <div>
+              <img src={Umbrella} id="main-text"/> 
+              <img src={cloud4} id="cloud"/> 
+            </div>
+          ): null }
             <ul className="nav flex-column" >
                 <li className="nav-item active">
                   <Link to={"/"} className="nav-link nav-text" onClick={() => {setMainText(true);}} >U M B R E L L A</Link>
@@ -58,11 +63,14 @@ function Navbar(props) {
                     <Link to={'#'} className="nav-text nav-link">Projects</Link>
                   </li>
                   <Menu className=" active projects-menu" projectsAnchor={projectsAnchor} keepMounted open={Boolean(projectsAnchor)} onClose={handleClose} >
-                    <MenuItem onClick={handleClose}>
+                    {/*<MenuItem onClick={handleClose}>
                       <Link to={'/tic-tac-toe'} className="nav-link nav-text menu-item" onClick={() => {setMainText(false)}}>Tic Tac Toe</Link>
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
+                </MenuItem>*/}
+                    {/*<MenuItem onClick={handleClose}>
                       <Link to={'/stock'} className="nav-link nav-text menu-item" onClick={() => {setMainText(false)}}>Stocks</Link>
+              </MenuItem>*/}
+                    <MenuItem onClick={handleClose}>
+                      <Link to={'/sort'} className="nav-link nav-text menu-item" onClick={() => {setMainText(false)}}>Sorting Algorithms</Link>
                     </MenuItem>
                   </Menu>
                   <li className="nav-item active">
@@ -83,6 +91,7 @@ function Navbar(props) {
             <Route path="/contact" component={Contact} />
             <Route path="/about" component={About} />
             {/*<Route path="/blog" component={Blog} />*/}
+            <Route path="/sort" component={SortingNav} />
             <Route path="/stock" component={Stock} />
             <Route path="/thoughts" component={Thoughts} />
             <Route path="/tic-tac-toe" component={TicTacToe} />

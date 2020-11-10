@@ -55,6 +55,14 @@
   margin-bottom: 0;
 }
 
+#cloud{
+  position: absolute;
+  width: 30vw;
+  top: 20vh;
+  left: 50vw;
+  bottom: 0;
+}
+
 
 
 

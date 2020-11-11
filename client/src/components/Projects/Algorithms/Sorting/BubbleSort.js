@@ -24,7 +24,11 @@ function BubbleSort(props){
                 if (tempArr[i] > tempArr[i + 1]) {
                     swap(tempArr, i, i + 1);
                     setValues([...values, tempArr]);
-                    await sleep(40);
+                    document.getElementById(i).style.background = "black";
+                    document.getElementById(i + 1).style.background = "black";
+                    await sleep(200);
+                    document.getElementById(i).style.background = "white";
+                    document.getElementById(i + 1).style.background = "white";
                     sorted = false;
                 }
             }

@@ -17,7 +17,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
   // false for not mobile device
   isMobile = false;
 }
-console.log(isMobile);
+//console.log(isMobile);
 
 /*ReactDOM.render(
   <React.StrictMode>

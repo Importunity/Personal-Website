@@ -9,3 +9,28 @@
     text-decoration: none !important;
     color: white !important; 
 }
+
+.vertical-bar{
+    width: 20px;
+    display: inline-block;
+    background-color: white;
+    margin-left: 2px;
+}
+
+.algo-container{
+    position: absolute;
+    bottom: 10vh;
+    left: 15vw;
+}
+
+.sort-button{
+    display: inline-block !important;
+    margin-right: 5px !important;
+}
+
+
+@media screen and (max-width: 1000px){
+    .vertical-bar{
+        width: 10px;
+    }
+}

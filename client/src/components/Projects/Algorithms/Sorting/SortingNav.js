@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import '../../../../styles/Sort.css';
 import BubbleSort from './BubbleSort';
+import InsertionSort from './InsertionSort';
 
 const sort = () => {
     return <div></div>
@@ -37,11 +38,15 @@ function SortingNav(){
                             <Button>
                                 <Link to={'/sort/bubble-sort'} className="sort-item">Bubble Sort</Link>
                             </Button>
+                            <Button>
+                                <Link to={'/sort/insertion-sort'} className="sort-item">Insertion Sort</Link>
+                            </Button>
                         </Toolbar>
                     </AppBar>
                     <Switch>
                         <Route exact path="/sort" component={sort} />
                         <Route path="/sort/bubble-sort" render={(props) => (<BubbleSort {...props} values={values} counter={counter} handleCounterChange={handleCounterChange} />)}/>
+                        <Route path="/sort/insertion-sort" render={(props) => (<InsertionSort {...props} values={values} counter={counter} handleCounterChange={handleCounterChange} />)}/>
                     </Switch>
                 </Router>
             </div>

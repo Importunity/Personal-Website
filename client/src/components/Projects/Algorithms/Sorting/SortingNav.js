@@ -23,11 +23,16 @@ const generateRandomValues = () =>{
 function SortingNav(){
     const[values, setValues] = useState(generateRandomValues());
     const[counter, setCounter] = useState(0);
+    const[showDescription, setShowDescription] = useState(true);
     useEffect(() => {
         setValues(generateRandomValues());
     }, [counter])
     const handleCounterChange = (value) => {
         setCounter(value);
+    }
+
+    const handleShowDescrption = () => {
+        setShowDescription(false);
     }
     //console.log(values);
     return (
@@ -36,17 +41,24 @@ function SortingNav(){
                 <Router>
                     <AppBar position="static" style={{ background: "#196b63"}} >
                         <Toolbar>
-                            <Button>
+                            <Button onClick={handleShowDescrption}>
                                 <Link to={'/sort/bubble-sort'} className="sort-item">Bubble Sort</Link>
                             </Button>
-                            <Button>
+                            <Button onClick={handleShowDescrption}>
                                 <Link to={'/sort/insertion-sort'} className="sort-item">Insertion Sort</Link>
                             </Button>
-                            <Button>
+                            <Button onClick={handleShowDescrption}>
                                 <Link to={'/sort/selection-sort'} className="sort-item">Selection Sort</Link>
                             </Button>
                         </Toolbar>
                     </AppBar>
+                    {showDescription? 
+                        (
+                            <Typography id="navigation-title">
+                                Click on links above to navigate to the sorting alogrithm
+                            </Typography>
+                        ) : null 
+                    }
                     <Switch>
                         <Route exact path="/sort" component={sort} />
                         <Route path="/sort/bubble-sort" render={(props) => (<BubbleSort {...props} values={values} counter={counter} handleCounterChange={handleCounterChange} />)}/>

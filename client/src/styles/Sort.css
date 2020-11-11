@@ -28,6 +28,13 @@
     margin-right: 5px !important;
 }
 
+#navigation-title{
+    position: absolute;
+    color: black;
+    left: 30vw;
+    top: 40vh;
+}
+
 
 @media screen and (max-width: 1000px){
     .vertical-bar{

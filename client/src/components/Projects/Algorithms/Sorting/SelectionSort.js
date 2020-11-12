@@ -11,6 +11,9 @@ const swap = (arr, firstIndex, secondIndex) => {
 
 function SelectionSort(props){
     const[values, setValues] = useState(props.values);
+    useEffect(() => {
+        setValues(props.values);
+    }, [props.values])
     //var arr = [26,54,93,17,77,31,44,55,20]; //testing arr
     async function selectionSort(){
         var tempArr = values;

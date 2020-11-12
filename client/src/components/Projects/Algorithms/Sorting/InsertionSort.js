@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../../../styles/Sort.css';
 import { Button } from '@material-ui/core';
 import { sleep } from './SortingUtil';
@@ -6,6 +6,9 @@ import { sleep } from './SortingUtil';
 
 function InsertionSort(props){
     const[values, setValues] = useState(props.values);
+    useEffect(() => {
+        setValues(props.values);
+    }, [props.values])
     async function insertionSort(){
         //[5,4,2,1]
         var temp = values;

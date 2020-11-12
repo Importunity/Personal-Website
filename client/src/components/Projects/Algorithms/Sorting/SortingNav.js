@@ -61,9 +61,9 @@ function SortingNav(){
                     }
                     <Switch>
                         <Route exact path="/sort" component={sort} />
-                        <Route path="/sort/bubble-sort" render={(props) => (<BubbleSort {...props} values={values} counter={counter} handleCounterChange={handleCounterChange} />)}/>
-                        <Route path="/sort/insertion-sort" render={(props) => (<InsertionSort {...props} values={values} counter={counter} handleCounterChange={handleCounterChange} />)}/>
-                        <Route path="/sort/selection-sort" render={(props) => (<SelectionSort {...props} values={values} counter={counter} handleCounterChange={handleCounterChange} />)}/>
+                        <Route exact path="/sort/bubble-sort" render={(props) => (<BubbleSort {...props} values={values} counter={counter} handleCounterChange={handleCounterChange} />)}/>
+                        <Route exact path="/sort/insertion-sort" render={(props) => (<InsertionSort {...props} values={values} counter={counter} handleCounterChange={handleCounterChange} />)}/>
+                        <Route exact path="/sort/selection-sort" render={(props) => (<SelectionSort {...props} values={values} counter={counter} handleCounterChange={handleCounterChange} />)}/>
                     </Switch>
                 </Router>
             </div>

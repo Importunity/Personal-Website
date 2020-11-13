@@ -14,7 +14,7 @@ const generateRandomValues = () =>{
     // create empty array
     var values = [];
     for(var i = 0; i < 50; i++){
-        values.push(Math.floor(Math.random() * (500 - 50) + 50));
+        values.push(Math.floor(Math.random() * (Math.floor(window.innerHeight / 3) - 50) + 50));
     }
     return values;
 }

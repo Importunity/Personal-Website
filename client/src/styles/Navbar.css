@@ -22,8 +22,8 @@
 #main-text{
   position: absolute;
   width: 40vw;
-  top: 30px;
-  bottom: 0;
+  bottom: 20vh;
+  left: 30vw;
 }
 
 .nav-item{
@@ -59,7 +59,7 @@
   position: absolute;
   width: 30vw;
   top: 20vh;
-  left: 50vw;
+  left: 31vw;
   bottom: 0;
 }
 

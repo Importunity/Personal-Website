@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {USER_LOADING,USER_LOADED ,AUTH_ERROR ,LOGIN_SUCCESS, LOGIN_FAIL,LOGOUT_SUCCESS,REGISTER_SUCCESS ,REGISTER_FAIL} from './types';
+import {USER_LOADING,USER_LOADED ,AUTH_ERROR ,LOGIN_SUCCESS, LOGIN_FAIL,LOGOUT_SUCCESS} from './types';
 import { getErrors } from './errorActions';
 
 // check the token and load the user

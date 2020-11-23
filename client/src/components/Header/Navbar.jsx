@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {useState } from "react";
 
 import "../../styles/Navbar.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -6,7 +6,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Home from "./Home";
 import Login from "../Login/Login";
-import Blog from './Blog';
+//import Blog from './Blog';
 import Thoughts from './Thoughts/Thoughts';
 import TicTacToe from '../Projects/Simple Games/Tic-Tac-Toe/Game';
 import Stock from '../Projects/Stock Market/Stock';
@@ -16,7 +16,7 @@ import Logout from '../Login/Logout';
 import PropTypes from 'prop-types';
 
 
-import Umbrella from '../../assets/images/Umbrella.png';
+import Umbrella from '../../assets/images/Umbrella1.png';
 import { connect } from "react-redux";
 import { Menu, MenuItem } from "@material-ui/core";
 import SortingNav from "../Projects/Algorithms/Sorting/SortingNav";

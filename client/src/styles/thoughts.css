@@ -1,0 +1,30 @@
+.thoughts-container{
+    columns: 5;
+    max-height: 100ch;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#create-thoughts{
+    width: 50%;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+
+@media only screen and (max-width: 1200px){
+  .thoughts-container{
+      columns: 3;
+  }
+}
+  
+@media only screen and (max-width: 600px){
+    .thoughts-container{
+        columns: 1;
+    }
+
+    .thought-card{
+        margin-top: 2vh !important;
+    }
+}

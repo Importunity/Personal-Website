@@ -1,0 +1,11 @@
+.contact-item{
+    width: 40vw !important;
+    display: block !important;
+    margin-top: 2vh !important;
+    
+}
+
+.form-container{
+    padding-top: 10%;
+    margin-left: 30vw;
+}

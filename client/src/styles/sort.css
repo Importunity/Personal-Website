@@ -1,0 +1,52 @@
+.drawer-contents{
+    text-align: center;
+}
+
+.drawer-button{
+    width: 100%;
+    margin-top: 2vh;
+}
+
+
+.vertical-bar{
+    width: 20px;
+    display: inline-block;
+    background-color: white;
+    margin-left: 2px;
+}
+
+.algo-container{
+    text-align: center;
+    margin-top: 15%;
+}
+
+
+
+#change-btn{
+    margin-left: 40%;
+    margin-top: 20%;
+}
+
+.sorting-btn{
+    margin-left: 20vw;
+}
+
+
+@media only screen and (max-width: 1200px){
+    .vertical-bar{
+        width: 10px;
+    }
+    .algo-container{
+        text-align: center;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .vertical-bar{
+        width: 5px;
+    }
+    .algo-container{
+        text-align: center;
+    }
+}

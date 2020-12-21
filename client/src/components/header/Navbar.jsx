@@ -12,7 +12,6 @@ import Music from '../body/Music';
 import Login from '../login/Login';
 import Logout from '../login/Logout';
 import { useSelector } from 'react-redux';
-import Register from '../login/Register';
 
 
 function Navbar(){
@@ -43,7 +42,6 @@ function Navbar(){
                 <Route path="/contact"><Contact /></Route>
                 <Route path="/music"><Music /></Route>
                 <Route path="/amadeus/blog/login"><Login /></Route>
-                <Route path="/amadeus/blog/register"><Register /></Route>
                 <Route path="/"><Home /></Route>
             </Switch>
         </Router>

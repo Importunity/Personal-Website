@@ -12,7 +12,6 @@ import Music from '../body/Music';
 import Login from '../login/Login';
 import Logout from '../login/Logout';
 import { useSelector } from 'react-redux';
-import TwoSum from '../projects/leetcode/TwoSum';
 
 
 function Navbar(){

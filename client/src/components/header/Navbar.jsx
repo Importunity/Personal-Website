@@ -12,6 +12,7 @@ import Music from '../body/Music';
 import Login from '../login/Login';
 import Logout from '../login/Logout';
 import { useSelector } from 'react-redux';
+import TwoSum from '../projects/leetcode/TwoSum';
 
 
 function Navbar(){
@@ -26,12 +27,13 @@ function Navbar(){
                     <li className="nav-item dropdown">Projects
                         <div className="dropdown-content">
                             <Button className="nav-btn" type="ghost" icon={<span className="nav-icon"><BarChartOutlined /></span>}><Link to="/sort" className="sort-link">Sorting Algorithms</Link></Button>
-                            <Button className="nav-btn" type="ghost" icon={<span className="nav-icon"><ProjectOutlined /></span>}>Nexus</Button>
-                            <Button className="nav-btn" type="ghost" icon={<span className="nav-icon"><GlobalOutlined /></span>}>Eat-N-Go</Button>
+                            <Button className="nav-btn" type="ghost" icon={<span className="nav-icon"><ProjectOutlined /></span>}><a href="https://github.com/Importunity/Nexus">Nexus</a></Button>
+                            <Button className="nav-btn" type="ghost" icon={<span className="nav-icon"><GlobalOutlined /></span>}><a href="https://github.com/Importunity/Eat-N-Go">Eat-N-Go</a></Button>
                         </div>
                     </li>
                     <li className="nav-item"><Link to="/music" className="default-link">Music</Link></li>
                     <li className="nav-item"><Link to="/contact" className="default-link">Contact</Link></li>
+
                     {isAuthenticated? <li className="nav-item"><Logout /></li> : null }
                 </ul>
             </div>

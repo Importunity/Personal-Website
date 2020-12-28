@@ -92,6 +92,10 @@ html{
   height: 100vh;
 }
 
+.default-container{
+  text-align: center;
+}
+
 .default-font{
   color: white !important;
 }

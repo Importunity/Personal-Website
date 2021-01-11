@@ -29,14 +29,16 @@ function Thoughts(props){
                         <Typography.Paragraph className="title default-text" >Thoughts are mental cognitions—our ideas, opinions, and beliefs about ourselves and the world around us. They include the perspectives we bring to any situation or experience that color our point of view (for better, worse, or neutral). </Typography.Paragraph>
                         <Typography.Paragraph className="title default-text">Random thoughts of mine</Typography.Paragraph>
                     </Typography>
-                    <div className="thoughts-container">
-                        {notes.map((note, index) => {
-                            return(
-                                <div key={index} onClick={() => clickThought(note)}>
-                                    <Card hoverable><Meta className="default-text" title={note.title} description={note.content.length < 200? note.content : note.content.substring(0,200)} /></Card>
-                                </div>
-                            )
-                        })}
+                    <div className="thoughts">
+                        <div className="thoughts-container">
+                            {notes.map((note, index) => {
+                                return(
+                                    <div key={index} onClick={() => clickThought(note)}>
+                                        <Card hoverable><Meta className="default-text" title={note.title} description={note.content.length < 200? note.content : note.content.substring(0,200)} /></Card>
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
                     </>
                     : <ThoughtPage currentThought={currentThought}/>}

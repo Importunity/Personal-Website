@@ -1,9 +1,14 @@
 .thoughts-container{
-    columns: 5;
+    display: inline-flex;
+}
+
+.thoughts{
+    column-count: 5;
     max-height: 100ch;
     padding-top: 5%;
     padding-left: 10%;
     padding-right: 10%;
+    column-gap: 50px;
 }
 
 #create-thoughts{

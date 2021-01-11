@@ -12,6 +12,7 @@ import Music from '../body/Music';
 import Login from '../login/Login';
 import Logout from '../login/Logout';
 import { useSelector } from 'react-redux';
+import ProjectPage from '../projects/personal-projects/ProjectPage';
 
 
 function Navbar(){
@@ -43,6 +44,7 @@ function Navbar(){
                 <Route path="/contact"><Contact /></Route>
                 <Route path="/music"><Music /></Route>
                 <Route path="/amadeus/blog/login"><Login /></Route>
+                <Route path="/personal/projects"><ProjectPage /></Route>
                 <Route path="/"><Home /></Route>
             </Switch>
         </Router>

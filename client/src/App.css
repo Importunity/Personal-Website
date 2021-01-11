@@ -27,12 +27,11 @@ html{
 
 .home-content{
   color: white;
-  text-align: center;
   font-family: 'Playfair Display', serif;
   font-size: large;
   max-width: 50%;
   margin-left: 25%;
-  padding-top: 10%;
+  padding-top: 20vh;
 }
 
 .title{

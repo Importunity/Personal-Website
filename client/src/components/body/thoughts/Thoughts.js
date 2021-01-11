@@ -27,6 +27,7 @@ function Thoughts(props){
                     <Typography>
                         <Typography.Title className="title default-text">What Are Thoughts?</Typography.Title>
                         <Typography.Paragraph className="title default-text" >Thoughts are mental cognitions—our ideas, opinions, and beliefs about ourselves and the world around us. They include the perspectives we bring to any situation or experience that color our point of view (for better, worse, or neutral). </Typography.Paragraph>
+                        <Typography.Paragraph className="title default-text">Random thoughts of mine</Typography.Paragraph>
                     </Typography>
                     <div className="thoughts-container">
                         {notes.map((note, index) => {
